@@ -1,0 +1,16 @@
+{%extends 'votes/base.html'%}
+
+{%block content %}
+<ul class="list-group">
+
+{%for element in all_elements%}
+<li class="list-group-item list-group-item-secondary" style="text-align: center;padding: 0%;"><a href="/votes/{{element}}" style="font-size:150%;color: black;"><p>{{element}}</p></a></li>
+
+
+    
+
+
+{%endfor%}
+</ul>
+
+{%endblock%}

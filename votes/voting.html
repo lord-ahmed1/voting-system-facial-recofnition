@@ -1,0 +1,17 @@
+{%extends 'votes/base.html'%}
+
+{%block content %}
+
+{%for element in all_elements%}
+
+ <form action="/votes/" method="post">
+
+    <button type="submit">submit</button>
+
+ </form>
+
+
+{%endfor%}
+
+
+{%endblock%}

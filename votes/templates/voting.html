@@ -1,0 +1,37 @@
+{%extends 'votes/base.html'%}
+
+{%block content %}
+
+
+<form action="/votes/{{vote_title}}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+
+{%for element in all_elements%}
+
+
+
+
+
+
+
+<div class="form-check">
+    <input class="form-check-input" type="radio"  name="chosen" id="exampleRadios1" value="{{element}}" checked>
+    <label class="form-check-label" for="exampleRadios1">
+      {{element}}
+    </label>
+  </div>
+
+
+
+
+
+
+{%endfor%}
+
+<button class="btn btn-primary" type="submit" name="voted" value="voted">submit</button>
+<br>
+<label for="">let us see you !</label>{{check_face.img}}
+</form>
+
+
+{%endblock%}
